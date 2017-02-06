@@ -50,7 +50,7 @@ function imagely_scripts_styles() {
 	
 	wp_enqueue_script( 'imagely-responsive-menu', get_stylesheet_directory_uri() . '/js/imagely-responsive-menu.js', array( 'jquery' ), '1.0.0', true );
 
-	wp_enqueue_script( 'kelldoll-scripts', get_stylesheet_directory_uri() . 'scripts.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'kelldoll-scripts', get_stylesheet_directory_uri() . '/scripts.js', array( 'jquery' ), '1.0.0', true );
 
 	if ( is_single() && is_active_sidebar( 'after-entry' ) && ( is_active_widget( false, false, 'featured-page' ) || is_active_widget( false, false, 'featured-post' ) ) ) {
 
