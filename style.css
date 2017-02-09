@@ -8,7 +8,7 @@
  * 	Text Domain: kelldollwell2017
  * 	Author: Imagely
  * 	Author URI: https://www.imagely.com
- * 	Version: 1.0.6
+ * 	Version: 1.0.7
  * 	Template: genesis
  * 	Template Version: 2.0+
  * 	License: GPL-2.0+
@@ -376,7 +376,7 @@ body > div {
 
 body {
    background-color: #eee;
-   color: #4e4852;
+   color: rgb(77,77,77);
    font-family: 'Lato', sans-serif;
    font-size: 18px;
    font-size: 1.8rem;
@@ -634,9 +634,10 @@ h6 {
  *****************************************************************************/
 /* ---------- 4.1 Site Header ---------- */
 .site-header {
-   background-color: #1d242a;
-   border-bottom: 1px solid #2a3137;
-   box-shadow: none;
+   background-color: #fff;
+   -webkit-box-shadow: 0px 3px 10px 0px rgba(155,155,155,0.5);
+   -moz-box-shadow: 0px 3px 10px 0px rgba(155,155,155,0.5);
+   box-shadow: 0px 3px 10px 0px rgba(155,155,155,0.5);
    line-height: 30px;
    min-height: 50px;
    padding: 0 40px;
@@ -649,6 +650,7 @@ h6 {
 .site-header.transparent {
    background-color: transparent;
    border-bottom: none;
+   box-shadow: none;
    -webkit-transition: all .2s ease-in-out;
            transition: all .2s ease-in-out;
 }
@@ -673,16 +675,18 @@ h6 {
 
 .site-header.transparent .genesis-nav-menu a:hover,
 .site-header.transparent .genesis-nav-menu a:active {
-   color: #fff;
+   color: #ddd;
 }
 
 .site-header.transparent .genesis-nav-menu .sub-menu a {
-   color: #333;
+   color: #555;
+   font-weight: normal;
+   text-transform: none;
 }
 
 .site-header.transparent .genesis-nav-menu .sub-menu a:hover,
 .site-header.transparent .genesis-nav-menu .sub-menu a:active {
-   color: #ed4933;
+   color: #27d8cf;
 }
 
 .admin-bar .site-header {
@@ -786,7 +790,7 @@ h6 {
 }
 
 .genesis-nav-menu a {
-   color: #fff;
+   color: #555;
    display: block;
    font-size: 12px;
    font-size: 1.2rem;
@@ -796,7 +800,7 @@ h6 {
 }
 
 .genesis-nav-menu a:hover {
-   color: #ddd;
+   color: #27d8cf;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -812,15 +816,17 @@ h6 {
 .genesis-nav-menu .sub-menu a {
    border: 1px solid #eee;
    border-top: 0;
-   color: #333;
    padding: 15px;
    position: relative;
    width: 180px;
+   color: #555;
+   font-weight: normal;
+   text-transform: none;
 }
 
 .genesis-nav-menu .sub-menu a:hover,
 .genesis-nav-menu .sub-menu a:active {
-   color: #ed4933;
+   color: #27d8cf;
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {
@@ -1282,7 +1288,7 @@ p.form-submit,
  *****************************************************************************/
 /* ---------- 8.1 Site Footer ---------- */
 .site-footer {
-   background-color: #1d242a;
+   background-color: rgb(102,93,93);
    border-top: none;
    color: #fff;
    font-size: 14px;
@@ -3266,6 +3272,8 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .site-header {
       background-color: #1d242a;
       box-shadow: none;
+      border: none;
+      min-height: 60px;
       line-height: 25px;
       padding: 10px 0 20px;
       position: inherit;
@@ -3432,11 +3440,12 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
       padding-left: 10px;
    }
    .nav-primary .responsive-menu .menu-open.menu-item-has-children:before {
-      content: '\f106';
+      /*content: '\f106';*/
    }
    .site-header.transparent {
       background-color: #1d242a;
       border-bottom: none;
+      box-shadow: none;
    }
    .site-header.transparent .site-title a,
    .site-header.transparent .site-title a:hover,
