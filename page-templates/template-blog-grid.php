@@ -12,7 +12,15 @@ function imagely_grid_body_class( $classes ) {
 }
 
 /* Force full width content */
-add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+// add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+
+/* page title */
+function do_blog_title( $genesis_do_breadcrumbs ) { 
+	$page = get_page_by_path('blog', OBJECT, 'page');
+	echo "<h1>".$page->post_title."</h1>";
+	echo "<p>".$page->post_content."</p>";
+}; 
+add_action( 'genesis_before_loop', 'do_blog_title', 10, 1 ); 
 
 /* Reposition the entry meta in the entry header */
 remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
