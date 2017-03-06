@@ -8,7 +8,7 @@
  * 	Text Domain: kelldollwell2017
  * 	Author: Imagely
  * 	Author URI: https://www.imagely.com
- * 	Version: 1.0.7
+ * 	Version: 1.0.6
  * 	Template: genesis
  * 	Template Version: 2.0+
  * 	License: GPL-2.0+
@@ -96,6 +96,8 @@
  * 1: RESET
  * 			
  *****************************************************************************/
+@import url('https://fonts.googleapis.com/css?family=Allura');
+
 /* ---------- 1.1 Baseline Normalize (MIT License | git.io/normalize) ----------- */
 html {
    font-family: sans-serif;
@@ -375,8 +377,8 @@ body > div {
 }
 
 body {
-   background-color: #eee;
    color: rgb(77,77,77);
+   background-color: #eee;
    font-family: 'Lato', sans-serif;
    font-size: 18px;
    font-size: 1.8rem;
@@ -410,7 +412,7 @@ textarea:focus,
 }
 
 a {
-   color: #ed4933;
+   color: #000;
    text-decoration: none;
 }
 
@@ -634,10 +636,9 @@ h6 {
  *****************************************************************************/
 /* ---------- 4.1 Site Header ---------- */
 .site-header {
-   background-color: #fff;
-   -webkit-box-shadow: 0px 3px 10px 0px rgba(155,155,155,0.5);
-   -moz-box-shadow: 0px 3px 10px 0px rgba(155,155,155,0.5);
-   box-shadow: 0px 3px 10px 0px rgba(155,155,155,0.5);
+   background-color: #1d242a;
+   border-bottom: 1px solid #2a3137;
+   box-shadow: none;
    line-height: 30px;
    min-height: 50px;
    padding: 0 40px;
@@ -650,7 +651,6 @@ h6 {
 .site-header.transparent {
    background-color: transparent;
    border-bottom: none;
-   box-shadow: none;
    -webkit-transition: all .2s ease-in-out;
            transition: all .2s ease-in-out;
 }
@@ -675,18 +675,16 @@ h6 {
 
 .site-header.transparent .genesis-nav-menu a:hover,
 .site-header.transparent .genesis-nav-menu a:active {
-   color: #ddd;
+   color: #fff;
 }
 
 .site-header.transparent .genesis-nav-menu .sub-menu a {
-   color: #555;
-   font-weight: normal;
-   text-transform: none;
+   color: #333;
 }
 
 .site-header.transparent .genesis-nav-menu .sub-menu a:hover,
 .site-header.transparent .genesis-nav-menu .sub-menu a:active {
-   color: #27d8cf;
+   color: #ed4933;
 }
 
 .admin-bar .site-header {
@@ -738,10 +736,10 @@ h6 {
    background-size: contain !important;
    display: inline;
    float: left;
-   height: 50px;
+   height: 60px;
    margin: 0;
    padding: 0;
-   width: 400px;
+   width: 250px;
 }
 
 .site-description {
@@ -790,7 +788,7 @@ h6 {
 }
 
 .genesis-nav-menu a {
-   color: #555;
+   color: #fff;
    display: block;
    font-size: 12px;
    font-size: 1.2rem;
@@ -800,7 +798,7 @@ h6 {
 }
 
 .genesis-nav-menu a:hover {
-   color: #27d8cf;
+   color: #ddd;
 }
 
 .genesis-nav-menu .sub-menu {
@@ -816,17 +814,15 @@ h6 {
 .genesis-nav-menu .sub-menu a {
    border: 1px solid #eee;
    border-top: 0;
+   color: #333;
    padding: 15px;
    position: relative;
    width: 180px;
-   color: #555;
-   font-weight: normal;
-   text-transform: none;
 }
 
 .genesis-nav-menu .sub-menu a:hover,
 .genesis-nav-menu .sub-menu a:active {
-   color: #27d8cf;
+   color: #ed4933;
 }
 
 .genesis-nav-menu .sub-menu .sub-menu {
@@ -909,6 +905,16 @@ h6 {
 .menu .menu-item > a:focus + ul.sub-menu {
    left: auto;
    opacity: 1;
+}
+/* ---------- Social ---------- */
+.social-icon .icon-2x{
+   font-size: 22px;
+}
+.instagram{
+   margin-right: -55px;
+}
+.facebook{
+   margin-left: 25px;
 }
 
 /*****************************************************************************
@@ -1378,7 +1384,21 @@ p.form-submit,
    padding-right: 2.5%;
    width: 33.333333%;
 }
-
+#genesis-footer-widgets{
+   padding: 0;
+   text-align: center;
+   background-color: rgb(102,93,93);
+}
+#genesis-footer-widgets .footer-widgets-1{
+   float: none;
+   width: 100%;
+}
+.footer-widgets-1 form{
+   padding-top: 20px;
+}
+.footer-widgets-1 input{
+   width: 30%;
+}
 /*****************************************************************************
  * 
  * 9: WIDGETS
@@ -1581,8 +1601,8 @@ img {
 input,
 select,
 textarea {
-   background-color: #f5f5f5;
-   border: 1px solid #f5f5f5;
+   background-color: #fff;
+   border: 1px solid #fff;
    box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, .1);
    color: #333;
    font-size: 20px;
@@ -1590,7 +1610,7 @@ textarea {
    font-size: 20px;
    -webkit-font-smoothing: antialiased;
    font-weight: 300;
-   padding: 16px;
+   padding: 13px;
    width: 100%;
 }
 
@@ -1625,7 +1645,7 @@ input[type='submit'],
 .content .widget .textwidget a.button,
 .entry-content a.button,
 .entry-content a.more-link {
-   background-color: #ed4933;
+   background-color: rgba(255,255,255,.5);
    border-width: 0;
    color: #fff;
    cursor: pointer;
@@ -1633,11 +1653,11 @@ input[type='submit'],
    font-size: 14px;
    font-size: 1.4rem;
    font-weight: 700;
-   letter-spacing: 1px;
    padding: 18px 32px;
    text-transform: uppercase;
    white-space: normal;
    width: auto;
+   border: 1px solid #fff;
 }
 
 .entry-content a.more-link {
@@ -1682,10 +1702,19 @@ input:focus[type='submit'],
 .entry-content a.button:focus,
 .entry-content a.more-link:hover,
 .entry-content a.more-link:focus {
-   background-color: #ef5e4a;
-   color: #fff;
+   background-color: #fff;
+   color: #00a295;
    text-decoration: none;
 }
+
+input[type='search'],
+input[type='button'], 
+input[type='reset'], 
+input[type='submit']  { height: 52px; }
+
+input[type='button'], 
+input[type='reset'], 
+input[type='submit'] { border: none; }
 
 .footer-widgets button,
 .footer-widgets input[type='button'],
@@ -1693,7 +1722,7 @@ input:focus[type='submit'],
 .footer-widgets input[type='submit'],
 .footer-widgets .button,
 .footer-widgets .entry-content a.more-link {
-   background-color: #ed4933;
+   background-color: rgba(255,255,255,.5);
    color: #fff;
 }
 
@@ -1709,8 +1738,8 @@ input:focus[type='submit'],
 .footer-widgets .button:focus,
 .footer-widgets .entry-content a.more-link:hover,
 .footer-widgets .entry-content a.more-link:focus {
-   background-color: #ef5e4a;
-   color: #fff;
+   background-color: #fff;
+   color: rgb(102,93,93);
    text-decoration: none;
 }
 
@@ -1840,6 +1869,9 @@ th {
 .author-box p:last-child {
    margin-bottom: 0;
 }
+.background-none{
+   background-color: transparent;
+}
 
 .breadcrumb {
    border-bottom: 1px solid #eee;
@@ -1851,6 +1883,15 @@ th {
    margin-bottom: 60px;
    padding-bottom: 10px;
    text-transform: uppercase;
+}
+.align-left{
+   text-align: left;
+}
+.img-circle img{
+   border-radius: 50%;
+}
+.border-none{
+  border: none;
 }
 
 /* Search Form */
@@ -2201,11 +2242,12 @@ a[rel~='attachment']:hover,
 
 .front-page-1 .widget-area .wrap {
    display: inline-block;
-   padding: 50px;
    position: relative;
-   top: 45%;
+   top: 60%;
    -webkit-transform: translateY(-50%);
            transform: translateY(-50%);
+   text-align: left;
+   margin-left: 45%;
 }
 
 .front-page-1 .widget-title {
@@ -2281,7 +2323,7 @@ a[rel~='attachment']:hover,
    width: 100%;
 }
 
-.front-page-2 .widget-area,
+
 .front-page-3 .widget-area,
 .front-page-4 .widget-area,
 .front-page-5 .widget-area,
@@ -2307,28 +2349,50 @@ a[rel~='attachment']:hover,
 .front-page-10 .widget-title {
    font-size: 40px;
    font-size: 4rem;
-   letter-spacing: 1px;
+   letter-spacing: 0;
+}
+.front-page-4 .widget-title{
+   color: #000;
 }
 
 .front-page-2 {
    background-color: #fff;
    border-bottom: 1px solid #eee;
-   width: 1280px;
+   width: 100%;
+}
+.front-page-2 .panel-widget-style{
+   height: 270px;
 }
 
 .front-page-2 p {
    font-size: 16px;
    font-size: 1.6rem;
 }
+.front-page-2 input{
+   width: 90%;
+   margin: 10px 0;
+}
+.front-page-2 .form-hero{
+   float: left;
+}
+.front-page-2 #form-hero-submit{
+   width: 30%;
+   margin-top: 45px;
+   background-color: transparent;
+   border: solid 1px #fff;
+}
+.front-page-2 #form-hero-submit:hover{
+   color: #87244c;
+   background-color: #fff;
+}
 
 .front-page-3 {
    background-color: #fff;
-   border-bottom: 1px solid #eee;
 }
 
 .front-page-3 .widget {
    border-top: 1px solid #eee;
-   padding: 30px 60px;
+   padding: 30px 30px;
 }
 
 .front-page-3 a.alignleft .entry-image {
@@ -2337,6 +2401,13 @@ a[rel~='attachment']:hover,
 
 .front-page-3 a.alignright .entry-image {
    float: left;
+}
+.front-page-3 .widget .textwidget a.button{
+   background-color: rgb(0, 162, 149);
+}
+.front-page-3 .widget .textwidget a.button:hover{
+   background-color: #27d8cf;
+   color: #fff;
 }
 
 .front-page-bgimage {
@@ -2391,6 +2462,8 @@ a[rel~='attachment']:hover,
 }
 
 /* ---------- 12.5 Flexible Widgets ---------- */
+
+
 .flexible-widgets .widget {
    float: left;
    margin-bottom: 40px;
@@ -2420,6 +2493,12 @@ a[rel~='attachment']:hover,
 .flexible-widgets.widget-thirds .widget:nth-child(3n+2),
 .flexible-widgets.widget-fourths .widget:nth-child(4n+2) {
    clear: left;
+}
+/* custom */
+.front-page-2 .flexible-widgets .widget{
+   margin-bottom: 0;
+   padding-left: 0;
+   padding-right: 0;
 }
 
 /* ---------- 12.6 Featured Page Widget - Image Aligned Left/Right ---------- */
@@ -2845,11 +2924,12 @@ a[rel~='attachment']:hover,
    border: none;
    float: left;
    height: 300px;
-   margin-bottom: 0;
+   margin: 2% 1% auto;
    overflow: hidden;
    position: relative;
    text-align: center;
-   width: 33.3333333333%;
+   width: 48%;
+
 }
 
 .featuredpost.featured-align-none .entry-image {
@@ -2876,8 +2956,15 @@ a[rel~='attachment']:hover,
    width: 101%;
 }
 
+#front-page-4
+.featuredpost.featured-align-none .entry-header {
+   opacity: .5;
+}
+
+#front-page-4
+.featuredpost.featured-align-none .entry-header:hover,
 .featuredpost.featured-align-none .entry-header:hover {
-   opacity: .8;
+   opacity: .9;
 }
 
 .featuredpost.featured-align-none .entry-title,
@@ -3227,13 +3314,37 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
 
 /*****************************************************************************
  * 
- * 14: THEME SPECIFIC CSS
+ * 14: THEME SPECIFIC CSS AKA CUSTOM
  * 			
  *****************************************************************************/
-.front-page-3 .widget-area {
-   padding: 150px 0;
+.front-page-2 .widget-title{
+   font-size: 2rem;
+   text-transform: none;
 }
+.cta-left{
+   padding: 40px 80px;
+}
+.front-page-3 .widget{
+   border: none;
+}
+.front-page-3 .widget-area {
+   padding: 0;
+}
+.front-page-3 .widget-title{
 
+   font-size: 2rem;
+   margin-bottom: 0;
+}
+.green-dark .widget-title{
+   background-color: #00a295;
+}
+.front-page-3 p{
+   margin-bottom: 10px;
+}
+.slider-heading{
+   padding-bottom: 0;
+   margin-bottom: 0;
+}
 /*****************************************************************************
  * 
  * 15: MEDIA QUERIES
@@ -3270,10 +3381,10 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
       padding-top: 80px;
    }
    .site-header {
-      background-color: #1d242a;
-      box-shadow: none;
       border: none;
       min-height: 60px;
+      background-color: rgba(102,93,93,.8);
+      box-shadow: none;
       line-height: 25px;
       padding: 10px 0 20px;
       position: inherit;
@@ -3293,6 +3404,7 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .header-image .title-area {
       padding: 0 15px 10px;
    }
+
    .site-title {
       color: #fff;
       font-weight: 900;
@@ -3334,7 +3446,7 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .nav-primary {
       background-color: #1d242a;
       float: none;
-      padding: 0 10px;
+      padding: 5px 0px;
    }
    .nav-primary .sub-menu {
       border-top: none;
@@ -3440,12 +3552,11 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
       padding-left: 10px;
    }
    .nav-primary .responsive-menu .menu-open.menu-item-has-children:before {
-      /*content: '\f106';*/
+      content: '\f106';
    }
    .site-header.transparent {
       background-color: #1d242a;
       border-bottom: none;
-      box-shadow: none;
    }
    .site-header.transparent .site-title a,
    .site-header.transparent .site-title a:hover,
