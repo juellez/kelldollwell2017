@@ -11,7 +11,7 @@ function imagely_featured_body_class( $classes ) {
 }
 
 /* Force full width content */
-add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+// add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 
 /* Add extra wrap to .entry-header */
 add_action('genesis_entry_header', 'imagely_start_entry_header_wrap', 5);

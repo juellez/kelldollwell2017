@@ -372,11 +372,8 @@ function imagely_custom_footer( $output ) {
 	
 	$output = '<p>&copy; ' . date('Y') . ' &middot; <a href="' . esc_url( home_url( '/' )) . '" rel="home">' . get_bloginfo( 'name' ) . '</a>';
 
-	if ( $powered_by_imagely ) {
-		$output .= ' &middot; ' . __( 'Powered by', 'imagely-ansel') . ' <a href="http://www.imagely.com/" rel="nofollow">Imagely</a></p>';
-	} else {
-		$output .= '</p>';
-	}
+	$output .= ' &middot; <a href="/legal" rel="nofollow">Disclaimer, Privacy Policy and Terms of Use</a></p>';
+	$output .= '</p>';
 
 	return $output;
 }
