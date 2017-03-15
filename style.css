@@ -8,7 +8,7 @@
  * 	Text Domain: kelldollwell2017
  * 	Author: Imagely
  * 	Author URI: https://www.imagely.com
- * 	Version: 1.0.7
+ * 	Version: 1.0.8
  * 	Template: genesis
  * 	Template Version: 2.0+
  * 	License: GPL-2.0+
@@ -690,6 +690,7 @@ h6 {
 }
 
 .site-header.transparent .genesis-nav-menu .sub-menu a {
+   text-transform: none;
    color: #333;
 }
 
@@ -2219,6 +2220,7 @@ a[rel~='attachment']:hover,
    overflow: hidden;
    text-align: center;
    width: 100%;
+   margin-top: -80px;
 }
 
 .front-page-1 a {
@@ -2407,6 +2409,7 @@ a[rel~='attachment']:hover,
 }
 
 .front-page-3 .widget {
+   margin-top: 30px;
    padding: 30px 30px;
 }
 .front-page-3 .widget.so-panel {
@@ -2423,7 +2426,7 @@ a[rel~='attachment']:hover,
    background-color: #27d8cf;
    color: #fff;
 }
-.front-page-3 #cta-panel .panel-grid-cell .cta-panel-img .so-panel{
+.front-page-3 #cta-panel .panel-grid-cell .so-panel{
    margin-bottom: 0;
    margin-top: 0;
    padding-top: 0;
@@ -3670,12 +3673,17 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    /* Pages */
    .front-page-1 {
       height: 640px;
+      margin-top: 0px;
    }
    .front-page-1 .widget-area {
       height: 100%;
    }
    .front-page-1 .widget-area .wrap {
       background-color: none;
+   }
+   .front-page-2 .cta-left .textwidget,
+   .front-page-2 .widget-area .textwidget{
+      font-size: 1.4rem;
    }
    .front-page-3 .widget-title{
       font-size: .7em;
@@ -3880,6 +3888,14 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .front-page-2 .panel-widget-style{
       height: 280px;
    }
+   .front-page-2 .widget-area .widget-title{
+      font-size: 1.8rem;
+   }
+   .front-page-2 .cta-left .textwidget,
+   .front-page-2 .widget-area .textwidget{
+      font-size: 1.6rem;
+   }
+
    .front-page-3 .widget{
       padding: 15px 10px;
    }
@@ -3903,7 +3919,21 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
       font-size: 1.6rem;
    }
    .front-page-1 .widget-area .wrap {
-      padding: 15px 15px 30px;
+       background-color: rgba(45,22,42,.2);
+       padding: 2em 1em 3em 1em;
+       margin-left: 0;
+       margin-right: 0;
+       text-align: center;
+       position: absolute;
+       top: auto;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       -webkit-transform: none;
+       transform: none;
+   }
+   .front-page-1 .widget-area .wrap .widget-wrap {
+      padding-right: 0;
    }
    .front-page-1 .widget-title {
       font-size: 2.8rem;
@@ -3964,12 +3994,6 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    }
    .imagely-grid .content .entry-title {
       font-size: 2.2rem;
-   }
-   .front-page-2 .widget-area .widget-title{
-      font-size: 1.5rem;
-   }
-   .front-page-2 .widget-area .textwidget{
-      font-size: 1.3rem;
    }
    .front-page-2 .form-hero{
       width: 100%;
