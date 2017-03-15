@@ -75,6 +75,15 @@ function imagely_fonts() {
 	
 }
 
+/* Typography for ampersands */
+function kd_filter_widget_title( $instance_title, $instance, $this_id_base ) { 
+    // make filter magic happen here... 
+		$instance_title = str_replace("&#038;", '<span class="amp">&#038;</span>', $instance_title);
+    return $instance_title; 
+}; 
+add_filter( 'widget_title', 'kd_filter_widget_title', 10, 3 ); 
+
+
 /* Add support for custom header */
 add_theme_support( 'custom-header', array(
 	'width'           => 800,

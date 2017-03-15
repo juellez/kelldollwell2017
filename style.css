@@ -364,6 +364,17 @@ input[type='search'] {
  * 2: TYPOGRAPHY
  * 			
  *****************************************************************************/
+@font-face {
+    font-family: 'king_basil_literegular';
+    src: url('fonts/king-basil-lite-webfont.woff2') format('woff2'),
+         url('fonts/king-basil-lite-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+.amp {
+   font-family: 'king_basil_literegular', cursive;
+}
 /* ---------- 2.1 Typographical Elements ---------- */
 /* 10px browser default */
 html {
@@ -2230,10 +2241,10 @@ a[rel~='attachment']:hover,
 }
 
 .front-page-1 .widget-area {
-   background-color: rgba(0, 0, 0, .3);
+   background-color: rgba(45,22,42,.2);
    font-size: 18px;
-   font-size: 1.8rem;
-   font-weight: 400;
+   font-size: 2rem;
+   font-weight: 700;
    height: 100%;
    letter-spacing: 0;
    -webkit-transform-style: preserve-3d;
@@ -2261,7 +2272,9 @@ a[rel~='attachment']:hover,
    margin-bottom: 20px;
    text-transform: none;
 }
-
+.front-page-1 .widget-wrap {
+   padding-right: 2em;
+}
 .front-page-1 p {
    color: #fff;
    font-size: 18px;
@@ -2362,7 +2375,7 @@ a[rel~='attachment']:hover,
    width: 100%;
 }
 .front-page-2 .panel-widget-style{
-   height: 270px;
+   height: 285px;
 }
 
 .front-page-2 p {
@@ -2375,12 +2388,14 @@ a[rel~='attachment']:hover,
 }
 .front-page-2 .form-hero{
    float: left;
+   width: 70%;
 }
 .front-page-2 #form-hero-submit{
    width: 30%;
    margin-top: 45px;
    background-color: transparent;
    border: solid 1px #fff;
+   padding: 0;
 }
 .front-page-2 #form-hero-submit:hover{
    color: #87244c;
@@ -2392,10 +2407,11 @@ a[rel~='attachment']:hover,
 }
 
 .front-page-3 .widget {
-   border-top: 1px solid #eee;
    padding: 30px 30px;
 }
-
+.front-page-3 .widget.so-panel {
+   padding: 0 0 0 0;
+}
 .front-page-3 a.alignleft .entry-image {
    float: right;
 }
@@ -2403,14 +2419,80 @@ a[rel~='attachment']:hover,
 .front-page-3 a.alignright .entry-image {
    float: left;
 }
-.front-page-3 .widget .textwidget a.button{
-   background-color: rgb(0, 162, 149);
-}
 .front-page-3 .widget .textwidget a.button:hover{
    background-color: #27d8cf;
    color: #fff;
 }
+.front-page-3 #cta-panel .panel-grid-cell .cta-panel-img .so-panel{
+   margin-bottom: 0;
+   margin-top: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+}
+.front-page-3 .cta-panel-img img{
+   display: block;
+}
 
+.front-page-3 .widget-area {
+   padding: 0;
+}
+.front-page-3 .widget-title{
+   font-size: 2rem;
+   margin-bottom: 0;
+}
+.front-page-3 .panel-row-style .widget-title{
+   color: #fff;
+   padding: 10px 0;
+}
+.front-page-3 p{
+   margin-bottom: 10px;
+}
+
+/* testimonials block */
+.front-page-3 .sow-slider-base {
+   margin-top: 20px;
+}
+.front-page-3 ul.sow-slider-images {
+   background-color: transparent!important;
+}
+.front-page-3 .sow-slider-image img{
+   border-radius: 50%;
+}
+.front-page-3 h2.slider-heading {
+   font-family: 'king_basil_literegular';
+   text-transform: none;
+   font-size: 42px;
+   color: #87244c;
+   margin-top: 50px;
+   margin-bottom: -56px;
+   padding-bottom: 0;
+}
+.front-page-3 .widget_sow-layout-slider {
+   background-image: url(images/bracket-left.png), url(images/bracket-right.png);
+   background-position: left top, right bottom;
+   background-repeat: no-repeat;
+   min-height: 360px;
+   margin-left: -20px;
+   margin-right: -20px;
+   padding: 60px 0;
+}
+.front-page-3 .widget_sow-layout-slider .widget-wrap {
+   margin: 0 83px;
+}
+.front-page-3 .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-container .sow-slider-image-wrapper {
+   margin-left: 40px;
+   margin-right: 40px;
+}
+.front-page-3 section.widget_sow-layout-slider + section.widget {
+   margin-top: -54px;
+   margin-bottom: 20px;
+}
+
+
+.front-page-4 .widget-area{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 .front-page-bgimage {
    background: #fff url('images/front-page.jpg') no-repeat scroll center;
    background-size: cover;
@@ -2686,7 +2768,6 @@ a[rel~='attachment']:hover,
            transform: translateY(-50%);
    -webkit-transition: all .2s ease-in-out;
            transition: all .2s ease-in-out;
-   width: 101%;
 }
 
 .featuredpage.featured-align-none .entry-header:hover {
@@ -3323,33 +3404,15 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    text-transform: none;
 }
 .cta-left{
-   padding: 40px 80px;
+   padding: 40px 40px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 }
-.front-page-3 .widget{
-   border: none;
+.cta-left .textwidget{
+   font-size: 1.7rem;
 }
-.front-page-3 .widget-area {
-   padding: 0;
-}
-.front-page-3 .widget-title{
-   font-size: 2rem;
-   margin-bottom: 0;
-}
-.front-page-3 .panel-row-style .widget-title{
-   background-color: #87244c;
-   color: #fff;
-   padding: 10px 0;
-}
-.front-page-3 p{
-   margin-bottom: 10px;
-}
-.slider-heading{
-   padding-bottom: 0;
-   margin-bottom: 0;
-}
-.sow-slider-image-container {
-   background-color: #e8e8e8;
-}
+
 /*****************************************************************************
  * 
  * 15: MEDIA QUERIES
@@ -3601,20 +3664,37 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
       margin-bottom: 40px;
       width: 100%;
    }
+   .cta-left{
+      padding: 5px 30px;
+   }
    /* Pages */
    .front-page-1 {
       height: 640px;
    }
    .front-page-1 .widget-area {
-      background-color: rgba(0, 0, 0, .3);
       height: 100%;
    }
    .front-page-1 .widget-area .wrap {
       background-color: none;
    }
+   .front-page-3 .widget-title{
+      font-size: .7em;
+   }
+   .front-page-3 h2.slider-heading {
+      font-size: 36px;
+      margin-bottom: -30px;
+   }
+   .front-page-3 .sow-slider-base ul.sow-slider-images li.sow-slider-image,
+   .front-page-3 .sow-slider-image-wrapper .widget-title {
+      font-size: 1.5rem;
+   }
+   .front-page-3 .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-container .sow-slider-image-wrapper {
+      padding-left: 0;
+      padding-right: 0;
+   }
    .flexible-widgets.widget-fourths .widget,
    .flexible-widgets.widget-halves .widget,
-   .flexible-widgets.widget-thirds .widget {
+   .flexible-widgets.widget-thirds .widget {c
       float: none;
       width: 100%;
    }
@@ -3635,7 +3715,6 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .featuredpage.featured-align-none,
    .featuredpost.featured-align-none .entry {
       float: left !important;
-      width: 50% !important;
    }
    .featuredpage.featured-align-left,
    .featuredpage.featured-align-right,
@@ -3707,6 +3786,9 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .full-width-content .featuredpage.featured-align-left,
    .imagely-featured-image .featuredpage.featured-align-left {
       width: 98% !important;
+   }
+   .featuredpost.featured-align-none .entry{
+      height: 245px;
    }
    .imagely-grid .site-inner {
       margin: 40px auto 100px;
@@ -3782,8 +3864,30 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .front-page-1 .widget-title {
       font-size: 3.6rem;
    }
+   .front-page-3 .widget-title{
+      font-size: 2rem;
+   }
+   .front-page-3 .sow-slider-image-wrapper .widget-title {
+      font-size: 1.5rem;
+   }
    .imagely-grid .content .entry {
       width: 99%;
+   }
+   .img-circle img {
+      max-width: 50% !important;
+     
+   }
+   .front-page-2 .panel-widget-style{
+      height: 280px;
+   }
+   .front-page-3 .widget{
+      padding: 15px 10px;
+   }
+   .front-page-3 .widget_sow-layout-slider {
+      padding: 20px 0;
+   }
+   .footer-widgets-1 input{
+      width: 100%;
    }
 }
 
@@ -3799,7 +3903,7 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
       font-size: 1.6rem;
    }
    .front-page-1 .widget-area .wrap {
-      padding: 70px 15px 30px;
+      padding: 15px 15px 30px;
    }
    .front-page-1 .widget-title {
       font-size: 2.8rem;
@@ -3816,17 +3920,7 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
       padding: 12px 24px;
       width: auto;
    }
-   .front-page-2 .widget-area,
-   .front-page-3 .widget-area,
-   .front-page-4 .widget-area,
-   .front-page-5 .widget-area,
-   .front-page-6 .widget-area,
-   .front-page-7 .widget-area,
-   .front-page-8 .widget-area,
-   .front-page-9 .widget-area,
-   .front-page-10 .widget-area {
-      padding: 150px 20px;
-   }
+
    .front-page-2 .widget-area .widget-title,
    .front-page-3 .widget-area .widget-title,
    .front-page-4 .widget-area .widget-title,
@@ -3838,6 +3932,18 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    .front-page-10 .widget-area .widget-title {
       font-size: 2.5rem;
    }
+   .front-page-3 .sow-slider-image-wrapper .widget-title {
+      font-size: 1.5rem;
+   }
+   .front-page-3 .sow-slider-base ul.sow-slider-images li.sow-slider-image .sow-slider-image-container .sow-slider-image-wrapper {
+      font-size: 1.2rem;
+      margin-left: 0;
+      margin-right: 0;
+   }
+   .front-page-3 section.widget_sow-layout-slider + section.widget {
+      margin-top: 0px;
+   }
+
    .imagely-masonry .content .entry {
       width: 99%;
    }
@@ -3858,6 +3964,35 @@ is selected. .imagely-masonry-2 styles simply override some .imagely-masonry sty
    }
    .imagely-grid .content .entry-title {
       font-size: 2.2rem;
+   }
+   .front-page-2 .widget-area .widget-title{
+      font-size: 1.5rem;
+   }
+   .front-page-2 .widget-area .textwidget{
+      font-size: 1.3rem;
+   }
+   .front-page-2 .form-hero{
+      width: 100%;
+      text-align: center;
+   }
+   .front-page-2 .align-left{
+      text-align: center;
+   }
+   .front-page-2 .cta-right, .front-page-2 #panel-w58be5cea8f658-0-1-0 > .panel-widget-style{
+      height: auto;
+      padding: 40px 5px 30px 5px;
+   }
+   .front-page-2 #form-hero-submit{
+      margin-top: 15px;
+      width: 50%;
+
+   }
+   #pg-w58be25166bda2-0, #pl-w58be25166bda2 .panel-grid-cell .so-panel{
+      margin-bottom: 0;
+   }
+   #pg-w58be25166bda2-0 .panel-grid-cell, #pg-w58be25166bda2-1 .panel-grid-cell{
+      padding-left: 0;
+      padding-right: 0;
    }
 }
 
